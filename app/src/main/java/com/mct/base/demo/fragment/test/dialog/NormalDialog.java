@@ -1,6 +1,7 @@
 package com.mct.base.demo.fragment.test.dialog;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -39,6 +40,9 @@ public class NormalDialog extends BaseBindingOverlayDialog<ViewDataBinding> {
     @Nullable
     @Override
     protected DialogOption onCreateDialogOption() {
-        return null;
+        return new DialogOption.Builder()
+                .setBackgroundColor(Color.WHITE)
+                .build();
     }
+
 }

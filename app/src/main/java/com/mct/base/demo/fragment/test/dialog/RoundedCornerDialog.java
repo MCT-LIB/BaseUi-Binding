@@ -1,6 +1,7 @@
 package com.mct.base.demo.fragment.test.dialog;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -40,6 +41,7 @@ public class RoundedCornerDialog extends BaseBindingOverlayDialog<ViewDataBindin
     @Override
     protected DialogOption onCreateDialogOption() {
         return new DialogOption.Builder()
+                .setBackgroundColor(Color.WHITE)
                 .setCornerRadius(16)
                 .build();
     }
