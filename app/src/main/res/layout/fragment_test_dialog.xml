@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?colorPrimary"
+            app:contentInsetStartWithNavigation="0dp"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="Test Dialog"
+            app:titleTextColor="@color/white" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="8dp">
+
+            <Button
+                android:id="@+id/btn_dialog_Normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Normal"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_dialog_Rounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rounded"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_bts_dialog_Normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bottom Sheet Normal"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_bts_dialog_Rounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bottom Sheet Rounded"
+                android:textAllCaps="false" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

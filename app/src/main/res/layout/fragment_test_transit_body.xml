@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="8dp">
+
+        <Button
+            android:id="@+id/btn_transitOpen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transit Open"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_transitClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transit Close"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_transitFade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transit Fade"
+            android:textAllCaps="false" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
