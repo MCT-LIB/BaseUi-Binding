@@ -12,7 +12,6 @@ import java.lang.reflect.Method;
 
 public class BindingUtils {
 
-    @Nullable
     @SuppressWarnings("unchecked")
     public static <B extends ViewBinding> B inflate(@NonNull Class<B> clazz,
                                                     @NonNull LayoutInflater inflater) {
@@ -29,7 +28,6 @@ public class BindingUtils {
         }
     }
 
-    @Nullable
     @SuppressWarnings("unchecked")
     public static <B extends ViewBinding> B inflate(@NonNull Class<B> clazz,
                                                     @NonNull LayoutInflater inflater,
