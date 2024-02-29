@@ -33,7 +33,7 @@ public class TestCircularRevealBodyFragment extends BaseBindingFragment<Fragment
 
     @NonNull
     @Override
-    protected Class<FragmentTestCircularRevealBodyBinding> getBindingClass() {
+    public Class<FragmentTestCircularRevealBodyBinding> getBindingClass() {
         return FragmentTestCircularRevealBodyBinding.class;
     }
 

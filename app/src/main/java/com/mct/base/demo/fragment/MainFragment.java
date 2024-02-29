@@ -23,7 +23,7 @@ public class MainFragment extends BaseBindingFragment<FragmentMainBinding> {
 
     @NonNull
     @Override
-    protected Class<FragmentMainBinding> getBindingClass() {
+    public Class<FragmentMainBinding> getBindingClass() {
         return FragmentMainBinding.class;
     }
 

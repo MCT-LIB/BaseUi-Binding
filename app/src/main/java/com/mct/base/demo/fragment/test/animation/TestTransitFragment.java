@@ -14,7 +14,7 @@ public class TestTransitFragment extends BaseBindingFragment<FragmentTestTransit
 
     @NonNull
     @Override
-    protected Class<FragmentTestTransitBinding> getBindingClass() {
+    public Class<FragmentTestTransitBinding> getBindingClass() {
         return FragmentTestTransitBinding.class;
     }
 

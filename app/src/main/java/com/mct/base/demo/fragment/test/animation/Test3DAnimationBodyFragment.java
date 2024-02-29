@@ -22,7 +22,7 @@ public class Test3DAnimationBodyFragment extends BaseBindingFragment<FragmentTes
 
     @NonNull
     @Override
-    protected Class<FragmentTest3dAnimationBodyBinding> getBindingClass() {
+    public Class<FragmentTest3dAnimationBodyBinding> getBindingClass() {
         return FragmentTest3dAnimationBodyBinding.class;
     }
 

@@ -7,32 +7,13 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.ViewDataBinding;
-import androidx.lifecycle.Lifecycle;
 
 import com.mct.base.ui.BaseOverlayDialog;
 
-public abstract class BaseBindingOverlayDialog<B extends ViewDataBinding> extends BaseOverlayDialog {
+public abstract class BaseBindingOverlayDialog<B extends ViewDataBinding>
+        extends BaseOverlayDialog implements BindingProvider<B> {
 
     protected B binding;
-
-    public BaseBindingOverlayDialog(@NonNull Context context) {
-        this(context, null);
-    }
-
-    public BaseBindingOverlayDialog(@NonNull Context context, Lifecycle lifecycle) {
-        super(context, lifecycle);
-    }
-
-    ///////////////////////////////////////////////////////////////////////////
-    // Abstract
-    ///////////////////////////////////////////////////////////////////////////
-
-    @NonNull
-    protected abstract Class<B> getBindingClass();
-
-    ///////////////////////////////////////////////////////////////////////////
-    // Override
-    ///////////////////////////////////////////////////////////////////////////
 
     @Nullable
     @Override
@@ -40,4 +21,10 @@ public abstract class BaseBindingOverlayDialog<B extends ViewDataBinding> extend
         binding = BindingUtils.inflate(getBindingClass(), inflater);
         return binding != null ? binding.getRoot() : null;
     }
+
+    /* --- Constructor --- */
+    public BaseBindingOverlayDialog(@NonNull Context context) {
+        super(context);
+    }
+
 }

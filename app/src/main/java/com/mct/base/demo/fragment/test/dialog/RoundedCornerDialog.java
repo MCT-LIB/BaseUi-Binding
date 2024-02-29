@@ -18,9 +18,8 @@ public class RoundedCornerDialog extends BaseBindingOverlayDialog<ViewDataBindin
         super(context);
     }
 
-    @NonNull
     @Override
-    protected Class<ViewDataBinding> getBindingClass() {
+    public Class<ViewDataBinding> getBindingClass() {
         return ViewDataBinding.class;
     }
 
@@ -31,10 +30,6 @@ public class RoundedCornerDialog extends BaseBindingOverlayDialog<ViewDataBindin
                 .setMessage("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
                 .setPositiveButton("Ok", (dialog, which) -> dismiss())
                 .create();
-    }
-
-    @Override
-    protected void onDialogCreated(@NonNull AppCompatDialog dialog, View view) {
     }
 
     @Nullable

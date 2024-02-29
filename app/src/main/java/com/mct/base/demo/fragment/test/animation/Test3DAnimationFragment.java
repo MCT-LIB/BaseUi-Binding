@@ -20,7 +20,7 @@ public class Test3DAnimationFragment extends BaseBindingFragment<FragmentTest3dA
 
     @NonNull
     @Override
-    protected Class<FragmentTest3dAnimationBinding> getBindingClass() {
+    public Class<FragmentTest3dAnimationBinding> getBindingClass() {
         return FragmentTest3dAnimationBinding.class;
     }
 

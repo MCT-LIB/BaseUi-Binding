@@ -18,9 +18,8 @@ public class NormalDialog extends BaseBindingOverlayDialog<ViewDataBinding> {
         super(context);
     }
 
-    @NonNull
     @Override
-    protected Class<ViewDataBinding> getBindingClass() {
+    public Class<ViewDataBinding> getBindingClass() {
         return ViewDataBinding.class;
     }
 
@@ -31,10 +30,6 @@ public class NormalDialog extends BaseBindingOverlayDialog<ViewDataBinding> {
                 .setMessage("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
                 .setPositiveButton("Ok", (dialog, which) -> dismiss())
                 .create();
-    }
-
-    @Override
-    protected void onDialogCreated(@NonNull AppCompatDialog dialog, View view) {
     }
 
     @Nullable

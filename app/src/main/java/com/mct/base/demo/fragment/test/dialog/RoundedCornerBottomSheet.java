@@ -18,20 +18,14 @@ public class RoundedCornerBottomSheet extends BaseBindingOverlayDialog<BtsTestBi
         super(context);
     }
 
-    @NonNull
     @Override
-    protected Class<BtsTestBinding> getBindingClass() {
+    public Class<BtsTestBinding> getBindingClass() {
         return BtsTestBinding.class;
     }
 
     @Override
     protected AppCompatDialog onCreateDialog(Context context) {
         return new BottomSheetDialog(context);
-    }
-
-    @Override
-    protected void onDialogCreated(@NonNull AppCompatDialog dialog, @NonNull View view) {
-        binding.tvTitle.setText(getClass().getSimpleName());
     }
 
     @Nullable
@@ -43,4 +37,8 @@ public class RoundedCornerBottomSheet extends BaseBindingOverlayDialog<BtsTestBi
                 .build();
     }
 
+    @Override
+    protected void onDialogCreated(@NonNull AppCompatDialog dialog, DialogOption dialogOption, View view) {
+        binding.tvTitle.setText(getClass().getSimpleName());
+    }
 }

@@ -16,9 +16,8 @@ public class TestDialogFragment extends BaseBindingFragment<FragmentTestDialogBi
 
     private final int color = Utils.generateBrightColor();
 
-    @NonNull
     @Override
-    protected Class<FragmentTestDialogBinding> getBindingClass() {
+    public Class<FragmentTestDialogBinding> getBindingClass() {
         return FragmentTestDialogBinding.class;
     }
 
@@ -40,7 +39,7 @@ public class TestDialogFragment extends BaseBindingFragment<FragmentTestDialogBi
     public void onClick(@NonNull View v) {
         switch (v.getId()) {
             case R.id.btn_dialog_Normal:
-                new NormalDialog(requireContext()).setLifecycle(getLifecycle()).show();
+                new NormalDialog(requireContext()).show();
                 break;
             case R.id.btn_dialog_Rounded:
                 new RoundedCornerDialog(requireContext()).show();

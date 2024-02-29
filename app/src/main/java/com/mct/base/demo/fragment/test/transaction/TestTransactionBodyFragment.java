@@ -23,7 +23,7 @@ public class TestTransactionBodyFragment extends BaseBindingFragment<FragmentTes
 
     @NonNull
     @Override
-    protected Class<FragmentTestTransactionBodyBinding> getBindingClass() {
+    public Class<FragmentTestTransactionBodyBinding> getBindingClass() {
         return FragmentTestTransactionBodyBinding.class;
     }
 
