@@ -5,21 +5,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.databinding.ViewDataBinding;
 
 import com.mct.base.ui.BaseOverlayDialog;
+
+import java.util.Optional;
 
 public abstract class BaseBindingOverlayDialog<B extends ViewDataBinding>
         extends BaseOverlayDialog implements BindingProvider<B> {
 
     protected B binding;
 
-    @Nullable
     @Override
     protected final View onCreateView(@NonNull LayoutInflater inflater) {
-        binding = BindingUtils.inflate(getBindingClass(), inflater);
-        return binding != null ? binding.getRoot() : null;
+        return Optional.ofNullable(binding = BindingUtils.inflate(getBindingClass(), inflater))
+                .map(ViewDataBinding::getRoot)
+                .orElse(null);
     }
 
     /* --- Constructor --- */

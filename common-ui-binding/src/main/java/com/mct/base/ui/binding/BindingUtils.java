@@ -31,7 +31,7 @@ public class BindingUtils {
     @SuppressWarnings("unchecked")
     public static <B extends ViewBinding> B inflate(@NonNull Class<B> clazz,
                                                     @NonNull LayoutInflater inflater,
-                                                    @Nullable ViewGroup viewGroup,
+                                                    @Nullable ViewGroup root,
                                                     boolean attachToRoot) {
         if (clazz == ViewDataBinding.class || clazz == ViewBinding.class) {
             return null;
@@ -40,7 +40,7 @@ public class BindingUtils {
             Method inflateMethod = clazz.getMethod(
                     "inflate", LayoutInflater.class, ViewGroup.class, boolean.class
             );
-            return (B) inflateMethod.invoke(null, inflater, viewGroup, attachToRoot);
+            return (B) inflateMethod.invoke(null, inflater, root, attachToRoot);
         } catch (Exception e) {
             throw new RuntimeException("Failed to inflate ViewBinding. ", e);
         }

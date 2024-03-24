@@ -11,6 +11,8 @@ import androidx.databinding.ViewDataBinding;
 
 import com.mct.base.ui.BaseFragment;
 
+import java.util.Optional;
+
 public abstract class BaseBindingFragment<B extends ViewDataBinding>
         extends BaseFragment implements BindingProvider<B> {
 
@@ -19,7 +21,8 @@ public abstract class BaseBindingFragment<B extends ViewDataBinding>
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = BindingUtils.inflate(getBindingClass(), inflater, container, false);
-        return binding != null ? binding.getRoot() : null;
+        return Optional.ofNullable(binding = BindingUtils.inflate(getBindingClass(), inflater, container, false))
+                .map(ViewDataBinding::getRoot)
+                .orElse(null);
     }
 }

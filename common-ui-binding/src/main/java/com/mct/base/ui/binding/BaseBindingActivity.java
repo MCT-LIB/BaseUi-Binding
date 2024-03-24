@@ -7,6 +7,8 @@ import androidx.databinding.ViewDataBinding;
 
 import com.mct.base.ui.BaseActivity;
 
+import java.util.Optional;
+
 public abstract class BaseBindingActivity<B extends ViewDataBinding>
         extends BaseActivity implements BindingProvider<B> {
 
@@ -15,10 +17,9 @@ public abstract class BaseBindingActivity<B extends ViewDataBinding>
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = BindingUtils.inflate(getBindingClass(), getLayoutInflater());
-        if (binding != null) {
-            setContentView(binding.getRoot());
-        }
+        Optional.ofNullable(binding = BindingUtils.inflate(getBindingClass(), getLayoutInflater()))
+                .map(ViewDataBinding::getRoot)
+                .ifPresent(this::setContentView);
     }
 
 }
