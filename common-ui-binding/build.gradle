@@ -33,7 +33,7 @@ android {
 
 dependencies {
 
-    api 'com.github.MCT-LIB:BaseUI:1.1.4'
+    api 'com.github.MCT-LIB:BaseUI:1.1.5'
     implementation 'androidx.appcompat:appcompat:1.6.1'
 
     testImplementation 'junit:junit:4.13.2'
