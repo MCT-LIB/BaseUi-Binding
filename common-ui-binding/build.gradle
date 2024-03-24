@@ -34,8 +34,7 @@ android {
 
 dependencies {
 
-    //noinspection GradleDynamicVersion
-    api 'com.github.MCT-LIB:BaseUI:+'
+    implementation 'com.github.MCT-LIB:BaseUI:1.1.3'
     implementation 'androidx.appcompat:appcompat:1.6.1'
 
     testImplementation 'junit:junit:4.13.2'
