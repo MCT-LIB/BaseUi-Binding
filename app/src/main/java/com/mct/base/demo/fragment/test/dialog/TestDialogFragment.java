@@ -37,19 +37,15 @@ public class TestDialogFragment extends BaseBindingFragment<FragmentTestDialogBi
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(@NonNull View v) {
-        switch (v.getId()) {
-            case R.id.btn_dialog_Normal:
-                new NormalDialog(requireContext()).show();
-                break;
-            case R.id.btn_dialog_Rounded:
-                new RoundedCornerDialog(requireContext()).show();
-                break;
-            case R.id.btn_bts_dialog_Normal:
-                new NormalBottomSheet(requireContext()).show();
-                break;
-            case R.id.btn_bts_dialog_Rounded:
-                new RoundedCornerBottomSheet(requireContext()).show();
-                break;
+        int id = v.getId();
+        if (id == R.id.btn_dialog_Normal) {
+            new NormalDialog(requireContext()).show();
+        } else if (id == R.id.btn_dialog_Rounded) {
+            new RoundedCornerDialog(requireContext()).show();
+        } else if (id == R.id.btn_bts_dialog_Normal) {
+            new NormalBottomSheet(requireContext()).show();
+        } else if (id == R.id.btn_bts_dialog_Rounded) {
+            new RoundedCornerBottomSheet(requireContext()).show();
         }
     }
 }
